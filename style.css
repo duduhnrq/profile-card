@@ -1,0 +1,174 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: rgb(228, 228, 228);
+    font-family: "Poppins", serif;
+}
+
+.blob-outer-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    inset: 0;
+    margin: auto;
+    filter: blur(100px);
+}
+
+.blob-inner-container {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 100vw;
+    height: 100vh;
+    min-width: 1000px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.blob {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    inset: 0;
+    margin: auto;
+    background: conic-gradient(from 0deg, #0669BF, #0788D9, #04588C, #0B9ED9, #14B5D9);
+    animation: spinBlob 8s linear infinite;
+}
+
+@keyframes spinBlob {
+    0% {
+        transform: rotate(0deg) scale(2);
+    }
+
+    100% {
+        transform: rotate(1turn) scale(2);
+    }
+}
+
+div#card {
+    padding: 20px;
+    width: 20%;
+    min-width: 250px;
+    background-color: rgb(247, 247, 247);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.349);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-radius: 25px;
+}
+
+div#card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 31%;
+    width: 100%;
+    background-color: #0788D9;
+    border-radius: 24px 24px 0px 0px;
+    z-index: -1;
+}
+
+div#card picture {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+div#card picture img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #0788D9;
+    padding: 3px;
+    background-color: white;
+}
+
+div#card h1 {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+div#card h2 {
+    font-size: 17px;
+    font-weight: 400;
+}
+
+div#card p {
+    margin: 15px;
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.sociais {
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+}
+
+.sociais a {
+    transition: transform 0.5s ease
+}
+
+.git:hover {
+    transform: scale(1.1);
+}
+
+.lin:hover {
+    transform: scale(1.1);
+}
+
+.ins:hover {
+    transform: scale(1.1);
+}
+
+
+.btn {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn a {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.btn .contact-btn {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 15px;
+    display: inline-block;
+    transition-duration: .5s;
+}
+
+.btn .download-btn {
+    color: black;
+    padding: 10px;
+    box-shadow: inset 0px 0px 0px 2px black;
+    border-radius: 15px;
+    display: inline-block;
+    transition-duration: .5s;
+}
+
+.contact-btn:hover {
+    transform: scale(1.1);
+}
+
+.download-btn:hover {
+    transform: scale(1.1);
+}
