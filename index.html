@@ -9,23 +9,23 @@
 </head>
 <body>
 
-    <label class="switch">
-        <input type="checkbox" id="switch">
-        <span class="slider"></span>
-        <span>Dark Mode</span>
-    </label>
+    <div class="dark-btn">
+        <p>Dark Mode</p>
+        <label class="switch">
+            <input type="checkbox" id="switch">
+            <span class="slider"></span>
+        </label>
+    </div>
 
     <script>
         const checkbox = document.getElementById("switch");
         const body = document.body;
 
-        // Verifica se o usuário já ativou o modo escuro antes
         if (localStorage.getItem("dark-mode") === "enabled") {
             body.classList.add("dark-mode");
             checkbox.checked = true;
         }
 
-        // Alterna o modo escuro ao clicar no botão
         checkbox.addEventListener("change", () => {
             if (checkbox.checked) {
                 body.classList.add("dark-mode");
@@ -43,7 +43,7 @@
         </div>
     </div>
     
-    <div id="card">
+    <div class="card">
         <picture>
             <img src="imagens/edufoto.png" alt="Foto de Eduardo Henrique">
         </picture>

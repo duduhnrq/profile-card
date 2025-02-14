@@ -7,27 +7,104 @@
     padding: 0px;
 }
 
+:root {
+    --color001: #121212;
+    --color002: #f7f7f7;
+    --color003: #0788D9;
+}
+
 body {
-    background-color: rgb(228, 228, 228);
+    background-color: var(--color002);
     font-family: "Poppins", serif;
     transition: background .3s, color .3s;
 }
 
 body.dark-mode {
-    background-color: #121212;
-    color: #ffffff;
+    background-color: var(--color001);
+    color: var(--color002);
 }
 
-.switch {
+body.dark-mode .card {
+    background-color: var(--color001);
+}
+
+body.dark-mode .contact-btn {
+    color: var(--color001);
+    background-color: var(--color002);
+}
+
+body.dark-mode .download-btn {
+    color: var(--color002);
+    box-shadow: inset 0px 0px 0px 2px var(--color002);
+}
+
+body.dark-mode .sociais {
+    filter: invert(1);
+}
+
+body.dark-mode .dark-btn p {
+    color: white;
+}
+
+.dark-btn {
     padding: 30px;
     display: flex;
-    justify-content: right;
-    gap: 5px;
-    cursor: pointer;
+    justify-content: center;
+    gap: 10px;
+}
+
+.dark-btn p {
+    font-weight: 400;
+    color: black;
+    font-style: italic;
+}
+
+input , span {
+    z-index: 10;
 }
 
 input {
-    z-index: 10;
+    display: none;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.350);
+    background-color: var(--color002);
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 3.5px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+input:checked + .slider {
+    background-color: var(--color001);
+}
+
+input:checked + .slider::before {
+    transform: translateX(25px);
 }
 
 .blob-outer-container {
@@ -48,7 +125,7 @@ input {
     height: 100vh;
     min-width: 1000px;
     overflow: hidden;
-    background-color: #fff;
+    background-color: var(--color002);
 }
 
 .blob {
@@ -71,11 +148,11 @@ input {
     }
 }
 
-div#card {
+div.card {
     padding: 20px;
     width: 20%;
     min-width: 250px;
-    background-color: rgb(247, 247, 247);
+    background-color: var(--color002);
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.349);
     position: absolute;
     top: 50%;
@@ -85,44 +162,44 @@ div#card {
     border-radius: 25px;
 }
 
-div#card::before {
+div.card::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     height: 31%;
     width: 100%;
-    background-color: #0788D9;
+    background-color: var(--color003);
     border-radius: 24px 24px 0px 0px;
     z-index: -1;
 }
 
-div#card picture {
+div.card picture {
     display: flex;
     justify-content: center;
     margin-bottom: 15px;
 }
 
-div#card picture img {
+div.card picture img {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    border: 3px solid #0788D9;
+    border: 3px solid var(--color003);
     padding: 3px;
     background-color: white;
 }
 
-div#card h1 {
+div.card h1 {
     font-size: 22px;
     font-weight: 500;
 }
 
-div#card h2 {
+div.card h2 {
     font-size: 17px;
     font-weight: 400;
 }
 
-div#card p {
+div.card p {
     margin: 15px;
     font-size: 13px;
     font-weight: 300;
@@ -166,7 +243,7 @@ div#card p {
 }
 
 .btn .contact-btn {
-    background-color: black;
+    background-color: var(--color001);
     color: white;
     padding: 10px;
     border-radius: 15px;
@@ -175,9 +252,9 @@ div#card p {
 }
 
 .btn .download-btn {
-    color: black;
+    color: var(--color001);
     padding: 10px;
-    box-shadow: inset 0px 0px 0px 2px black;
+    box-shadow: inset 0px 0px 0px 2px var(--color001);
     border-radius: 15px;
     display: inline-block;
     transition-duration: .5s;
