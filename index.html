@@ -17,26 +17,6 @@
         </label>
     </div>
 
-    <script>
-        const checkbox = document.getElementById("switch");
-        const body = document.body;
-
-        if (localStorage.getItem("dark-mode") === "enabled") {
-            body.classList.add("dark-mode");
-            checkbox.checked = true;
-        }
-
-        checkbox.addEventListener("change", () => {
-            if (checkbox.checked) {
-                body.classList.add("dark-mode");
-                localStorage.setItem("dark-mode", "enabled");
-            } else {
-                body.classList.remove("dark-mode");
-                localStorage.setItem("dark-mode", "disabled");
-            }
-        });
-    </script>
-
     <div class="blob-outer-container">
         <div class="blob-inner-container">
             <div class="blob"></div>
@@ -67,5 +47,6 @@
         </div>
     </div>
 
+    <script src="script.js"></script>
 </body>
 </html>
