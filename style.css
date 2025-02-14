@@ -10,6 +10,24 @@
 body {
     background-color: rgb(228, 228, 228);
     font-family: "Poppins", serif;
+    transition: background .3s, color .3s;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.switch {
+    padding: 30px;
+    display: flex;
+    justify-content: right;
+    gap: 5px;
+    cursor: pointer;
+}
+
+input {
+    z-index: 10;
 }
 
 .blob-outer-container {

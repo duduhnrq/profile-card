@@ -8,11 +8,41 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <label class="switch">
+        <input type="checkbox" id="switch">
+        <span class="slider"></span>
+        <span>Dark Mode</span>
+    </label>
+
+    <script>
+        const checkbox = document.getElementById("switch");
+        const body = document.body;
+
+        // Verifica se o usuário já ativou o modo escuro antes
+        if (localStorage.getItem("dark-mode") === "enabled") {
+            body.classList.add("dark-mode");
+            checkbox.checked = true;
+        }
+
+        // Alterna o modo escuro ao clicar no botão
+        checkbox.addEventListener("change", () => {
+            if (checkbox.checked) {
+                body.classList.add("dark-mode");
+                localStorage.setItem("dark-mode", "enabled");
+            } else {
+                body.classList.remove("dark-mode");
+                localStorage.setItem("dark-mode", "disabled");
+            }
+        });
+    </script>
+
     <div class="blob-outer-container">
         <div class="blob-inner-container">
             <div class="blob"></div>
         </div>
     </div>
+    
     <div id="card">
         <picture>
             <img src="imagens/edufoto.png" alt="Foto de Eduardo Henrique">
@@ -36,5 +66,6 @@
             <a href="arquivos/curriculo-eduardo.pdf" download="curriculo-eduardo" class="download-btn">Download CV</a>
         </div>
     </div>
+
 </body>
 </html>
