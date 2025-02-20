@@ -27,7 +27,7 @@ Este projeto é um **Profile Card** interativo desenvolvido com **HTML, CSS e Ja
 
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/seu-usuario/seu-repositorio.git
+   git clone https://github.com/duduhnrq/profile-card.git
 
 2. Abra o arquivo **index.html** no navegador
 
