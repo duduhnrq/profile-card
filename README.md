@@ -1,9 +1,9 @@
 # Profile Card
 
-## Sobre o Projeto
+## 📌 Sobre o Projeto
 Este projeto é um **Profile Card** interativo desenvolvido com **HTML, CSS e JavaScript**. Ele apresenta informações sobre mim, incluindo minha foto, curso, redes sociais, e possui um botão de contato e outro para download do meu CV.
 
-## Tecnologias Utilizadas
+## 🛠️ Tecnologias Utilizadas
 
 - **HTML5**: Estrutura da página
 
@@ -11,7 +11,7 @@ Este projeto é um **Profile Card** interativo desenvolvido com **HTML, CSS e Ja
 
 - **JavaScript**: Pequenas interações, como o modo noturno
 
-## Funcionalidades
+## 🚀 Funcionalidades
 
 - Exibição de um card com foto e informações pessoais
 
@@ -23,7 +23,11 @@ Este projeto é um **Profile Card** interativo desenvolvido com **HTML, CSS e Ja
 
 - Modo Noturno (Opcional)
 
-## Como Usar
+## 🖥️ Demonstração
+
+Acesse o site: [Profile Card](https://duduhnrq.github.io/profile-card/)
+
+## 💡 Como Usar
 
 1. Clone este repositório:
    ```bash
@@ -31,13 +35,13 @@ Este projeto é um **Profile Card** interativo desenvolvido com **HTML, CSS e Ja
 
 2. Abra o arquivo **index.html** no navegador
 
-## Melhorias Futuras
+## 🤝 Melhorias Futuras
 
 - Melhorar responsividade para telas menores
 
 - Criar uma versão com mais informações acadêmicas/profissionais
 
-## Contato
+## ☎️ Contato
 
 Caso queira entrar em contato, me encontre em:
 
