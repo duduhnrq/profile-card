@@ -47,4 +47,6 @@ Caso queira entrar em contato, me encontre em:
 
 - **GitHub**: @duduhnrq
 
-💻 Desenvolvido por Eduardo Henrique
+---
+
+💻 Desenvolvido por [Eduardo Henrique](https://github.com/duduhnrq)
